@@ -14,6 +14,9 @@ function initializeCarousel(carousel) {
         if (refEl) {
             refEl.classList.remove('is-ref');
         }
+        else {
+          refEl = seats[0];
+        }
 
         var new_seat = next(refEl);
 
