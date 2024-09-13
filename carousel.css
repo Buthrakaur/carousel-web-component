@@ -1,77 +1,75 @@
 .wrap {
-    overflow: hidden;
-  }
-  
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  left: -100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateX(100%);
+}
+@media (min-width: 30em) {
   .carousel {
-    display: flex;
-    left: -100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    transform: translateX(100%);
+    left: -33.33333%;
+    transform: translateX(33.33333%);
   }
-  @media (min-width: 30em) {
-    .carousel {
-      left: -33.33333%;
-      transform: translateX(33.33333%);
-    }
+}
+@media (min-width: 40em) {
+  .carousel {
+    left: -20%;
+    transform: translateX(20%);
   }
-  @media (min-width: 40em) {
-    .carousel {
-      left: -20%;
-      transform: translateX(20%);
-    }
-  }
-  
+}
+
+.carousel.is-reversing {
+  transform: translateX(-100%);
+}
+@media (min-width: 30em) {
   .carousel.is-reversing {
-    transform: translateX(-100%);
+    transform: translateX(-33.33333%);
   }
-  @media (min-width: 30em) {
-    .carousel.is-reversing {
-      transform: translateX(-33.33333%);
-    }
+}
+@media (min-width: 40em) {
+  .carousel.is-reversing {
+    transform: translateX(-20%);
   }
-  @media (min-width: 40em) {
-    .carousel.is-reversing {
-      transform: translateX(-20%);
-    }
-  }
-  
-  .carousel.is-set {
-    transform: none;
-    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  
+}
+
+.carousel.is-set {
+  transform: none;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.carousel-seat {
+  flex: 1 0 33.33333%;
+  order: 2;
+  line-height: 100px;
+  text-align: center;
+}
+@media (min-width: 30em) {
   .carousel-seat {
-  /*  background: #ddd; */
-    flex: 1 0 33.33333%;
-    order: 2;
-    text-align: center;
+    flex-basis: 33.33333%;
   }
-  .carousel-seat:nth-child(even) {
-  /*  background: #d5d5d5;*/
+}
+@media (min-width: 40em) {
+  .carousel-seat {
+    flex-basis: 20%;
   }
-  @media (min-width: 30em) {
-    .carousel-seat {
-      flex-basis: 33.33333%;
-    }
-  }
-  @media (min-width: 40em) {
-    .carousel-seat {
-      flex-basis: 20%;
-    }
-  }
-  
-  .carousel-seat.is-ref {
-    order: 1;
-  }
-  /*
-  h2 {
-    color: #aaa;
-    font-size: 7em;
-    font-weight: normal;
-    margin: 0;
-    padding: 0.6em 0;
-    text-align: center;
-  }*/
+}
+
+.carousel-seat > img {
+  vertical-align: middle;
+}
+
+.carousel-seat.is-ref {
+  order: 1;
+}
+
+.carousel-seat img {
+  max-width: 150px;
+  max-height: 100px;
+  object-fit: cover;
+}
