@@ -45,8 +45,9 @@
   
   .carousel-seat {
   /*  background: #ddd; */
-    flex: 1 0 100%;
+    flex: 1 0 33.33333%;
     order: 2;
+    text-align: center;
   }
   .carousel-seat:nth-child(even) {
   /*  background: #d5d5d5;*/
