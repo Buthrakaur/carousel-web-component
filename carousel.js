@@ -40,4 +40,5 @@ function initializeCarousels(){
     });
 }
 
-document.addEventListener('DOMContentLoaded', initializeCarousels);
+// document.addEventListener('DOMContentLoaded', initializeCarousels);
+window.onload = initializeCarousels;
